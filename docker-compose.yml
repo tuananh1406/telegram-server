@@ -1,0 +1,11 @@
+version: "2"
+services: 
+  telegram_server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - /tmp/:/tmp/
+    dns:
+      - 8.8.8.8
+    network_mode: host
